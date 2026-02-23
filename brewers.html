@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BCF Impact Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="top-bar">
+            <button class="menu-btn">☰</button>
+            <div class="search-box">
+                <span class="search-icon">🔍</span>
+                <input type="text" placeholder="Hinted search text">
+            </div>
+        </div>
+        <div class="logo-area">
+            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/1/11/Milwaukee_Brewers_logo.svg/1200px-Milwaukee_Brewers_logo.svg.png" alt="Brewers Logo" class="bcf-logo">
+        </div>
+    </header>
+
+    <main class="dashboard-container">
+        <div class="grid-row">
+            <section class="card snapshot-card">
+                <h2 class="card-title">Community Impact Snapshot</h2>
+                <div class="stats-row">
+                    <div class="stat"><span class="icon">💰</span> <strong>$48,000</strong> <small>Funds Deployed</small></div>
+                    <div class="stat"><span class="icon">👥</span> <strong>2,350</strong> <small>People Helped</small></div>
+                    <div class="stat"><span class="icon">📋</span> <strong>18</strong> <small>Programs Funded</small></div>
+                </div>
+                <div class="outcomes-list">
+                    <p><strong>Key Outcomes:</strong></p>
+                    <ul>
+                        <li>300 students supported in education programs</li>
+                        <li>1,500 meals provided through food initiatives</li>
+                        <li>120 families assisted with housing services</li>
+                    </ul>
+                </div>
+                <div class="efficiency-footer">
+                    Efficiency: ~$20 per person impacted <span class="trend">▲ 15%</span>
+                </div>
+            </section>
+
+            <section class="card chart-card">
+                <button class="nav-arrow left" id="chartPrev">◀</button>
+                <div class="chart-content">
+                    <div class="bar-container">
+                        <div class="bar" style="width: 20%; background: #4caf50;"><span>Potawatomi</span></div>
+                        <div class="bar" style="width: 40%; background: #fbc02d;"><span>Aurora Health</span></div>
+                        <div class="bar" style="width: 60%; background: #e91e63;"><span>Admirals</span></div>
+                        <div class="bar" style="width: 80%; background: #ff9800;"><span>We Energy</span></div>
+                        <div class="bar" style="width: 95%; background: #2196f3;"><span>North Western</span></div>
+                    </div>
+                </div>
+                <button class="nav-arrow right" id="chartNext">▶</button>
+            </section>
+        </div>
+
+        <div class="grid-row bottom">
+            <section class="card story-card">
+                <button class="nav-arrow left" id="storyPrev">◀</button>
+                <div class="story-content">
+                    <div class="partner-logo">
+                        <img src="https://www.cityyear.org/wp-content/uploads/2020/05/City-Year-Logo-Horizontal-RGB.png" alt="City Year">
+                    </div>
+                    <p id="storyText">BCF funding supported City Year Milwaukee's in-school tutoring and mentorship programs, helping over 250 students improve attendance and performance.</p>
+                </div>
+                <button class="nav-arrow right" id="storyNext">▶</button>
+            </section>
+
+            <div class="action-buttons">
+                <button class="btn btn-navy" id="btnStory">Community Story</button>
+                <button class="btn btn-gold" id="btnDash">View Impact Dashboard</button>
+                <button class="btn btn-blue" id="btnFund">Submit Funding Request</button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="tab-nav">
+        <button class="tab">Video</button>
+        <button class="tab active">Biography</button>
+        <button class="tab">Photos</button>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

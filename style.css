@@ -1,0 +1,78 @@
+:root {
+    --navy: #0A2351;
+    --gold: #FFC52F;
+    --gold-light: #FFEBAD;
+    --white: #ffffff;
+    --blue-btn: #1A237E;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Arial', sans-serif; }
+
+body { background-color: #f4f4f4; padding-bottom: 80px; }
+
+/* Header & Logo */
+.main-header { background: var(--white); border-bottom: 2px solid #ddd; padding: 10px 0; }
+.top-bar { display: flex; justify-content: space-between; align-items: center; padding: 0 20px; }
+.menu-btn { font-size: 24px; background: none; border: none; cursor: pointer; color: var(--navy); }
+
+.search-box { background: var(--navy); border-radius: 20px; padding: 5px 15px; display: flex; align-items: center; width: 250px; }
+.search-box input { background: none; border: none; color: white; margin-left: 10px; width: 100%; outline: none; }
+.search-icon { color: white; font-size: 14px; }
+
+.logo-area { text-align: center; margin-top: -20px; }
+.bcf-logo { height: 100px; filter: drop-shadow(2px 2px 5px rgba(0,0,0,0.2)); }
+
+/* Dashboard Layout */
+.dashboard-container { max-width: 1100px; margin: 30px auto; padding: 0 20px; display: flex; flex-direction: column; gap: 20px; }
+.grid-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.grid-row.bottom { grid-template-columns: 2fr 1fr; }
+
+/* Cards */
+.card { background: var(--white); border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); padding: 20px; position: relative; overflow: hidden; }
+.snapshot-card { background-color: var(--gold-light); border: 1px solid var(--gold); }
+.chart-card, .story-card { background-color: var(--navy); color: white; display: flex; align-items: center; gap: 15px; }
+
+.card-title { font-size: 18px; color: var(--navy); margin-bottom: 15px; border-bottom: 1px solid rgba(10,35,81,0.1); padding-bottom: 5px; }
+
+/* Statistics */
+.stats-row { display: flex; justify-content: space-between; margin-bottom: 15px; }
+.stat { text-align: center; }
+.stat strong { display: block; font-size: 18px; color: var(--navy); }
+.stat small { font-size: 11px; color: #555; font-weight: bold; }
+
+.outcomes-list { font-size: 13px; margin-bottom: 10px; }
+.outcomes-list ul { margin-left: 20px; margin-top: 5px; }
+.efficiency-footer { font-weight: bold; font-size: 13px; border-top: 1px solid rgba(0,0,0,0.1); pt: 10px; }
+.trend { color: #2e7d32; }
+
+/* Visual Chart */
+.chart-content { flex-grow: 1; display: flex; flex-direction: column; gap: 10px; }
+.bar-container { display: flex; flex-direction: column; gap: 8px; }
+.bar { height: 20px; border-radius: 0 4px 4px 0; position: relative; transition: width 0.5s ease; }
+.bar span { position: absolute; left: 5px; font-size: 9px; line-height: 20px; font-weight: bold; }
+
+/* Story Section */
+.story-content { display: flex; align-items: center; gap: 20px; flex-grow: 1; }
+.partner-logo { background: white; border-radius: 50%; width: 90px; height: 90px; padding: 10px; flex-shrink: 0; display: flex; align-items: center; }
+.partner-logo img { width: 100%; }
+.story-text { font-size: 13px; line-height: 1.4; }
+
+/* Arrows & Buttons */
+.nav-arrow { background: none; border: none; color: var(--gold); font-size: 24px; cursor: pointer; transition: transform 0.2s; }
+.nav-arrow:hover { transform: scale(1.2); }
+
+.action-buttons { display: flex; flex-direction: column; gap: 12px; }
+.btn { padding: 15px; border-radius: 12px; border: none; font-weight: bold; cursor: pointer; font-size: 15px; box-shadow: 0 4px 0 rgba(0,0,0,0.2); }
+.btn-navy { background: var(--navy); color: var(--gold); }
+.btn-gold { background: var(--gold); color: var(--navy); }
+.btn-blue { background: var(--blue-btn); color: white; }
+
+/* Footer Tabs */
+.tab-nav { position: fixed; bottom: 0; width: 100%; display: flex; height: 60px; }
+.tab { flex: 1; border: none; font-weight: bold; cursor: pointer; background: var(--gold); color: var(--navy); font-size: 14px; }
+.tab.active { background: var(--navy); color: white; }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .grid-row, .grid-row.bottom { grid-template-columns: 1fr; }
+}
